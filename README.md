@@ -4,9 +4,9 @@ import numpy as np
 def calculate(list):
     if len(list) != 9:
         raise ValueError("List must contain nine numbers.")
-    
+
     matrix = np.array(list).reshape(3, 3)
-    
+
     mean_axis1 = matrix.mean(axis=0).tolist()
     mean_axis2 = matrix.mean(axis=1).tolist()
     mean_flat = matrix.mean().tolist()
@@ -39,6 +39,6 @@ def calculate(list):
         'min': [min_axis1, min_axis2, min_flat],
         'sum': [sum_axis1, sum_axis2, sum_flat]
     }
-    
+
     return calculations
 ```
